@@ -8,5 +8,13 @@ authors = [
 readme = "README.md"
 dependencies = [
     "pulumi",
-    "pulumi-aws"
+    "pulumi-aws",
+    "dagster",
+    "dagit"
 ]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.dagster]
+module_name = "pipelines"
