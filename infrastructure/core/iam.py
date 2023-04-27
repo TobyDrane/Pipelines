@@ -8,7 +8,10 @@ sfn_role = aws.iam.Role(
             {
                 "Effect": "Allow",
                 "Principal": {
-                    "Service": "states.eu-west-2.amazonaws.com"
+                    "Service": "states.amazonaws.com",
+                    "AWS": [
+                        # Add the two role arns
+                    ]
                 },
                 "Action": "sts:AssumeRole"
             }
@@ -28,8 +31,14 @@ sfn_role_policy = aws.iam.RolePolicy(
                     "lambda:InvokeFunction"
                 ],
                 "Resource": "*"
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "states:StartExecution"
+                ],
+                "Resource": "*"
             }
-
         ]
     }"""
 )

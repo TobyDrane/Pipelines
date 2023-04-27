@@ -16,3 +16,5 @@ dependencies = [
     "boto3",
     "python-dotenv"
 ]
+[tool.setuptools.packages]
+find = {}

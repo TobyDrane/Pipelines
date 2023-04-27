@@ -30,6 +30,7 @@ infra/init:
 DIR=./pipelines/$(instance)/$(layer)
 
 infra/apply:
+	PYTHONPATH=$(DIR)/ pulumi stack select $(instance)-$(layer) --create
 	PYTHONPATH=$(DIR)/ pulumi up --config-file $(DIR)/Pulumi.main.yaml
 
 infra/cancel:
