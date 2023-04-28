@@ -8,5 +8,13 @@ authors = [
 readme = "README.md"
 dependencies = [
     "pulumi",
-    "pulumi-aws"
+    "pulumi-aws",
+    "pulumi-awsx",
+    "pulumi_terraform",
+    "prefect",
+    "s3fs",
+    "boto3",
+    "python-dotenv"
 ]
+[tool.setuptools.packages]
+find = {}
